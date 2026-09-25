@@ -35,6 +35,7 @@ paper_material/
 ├── AGENTS.md
 ├── README.md
 ├── TODO.md
+├── CONTEXT.md
 ├── docs/
 │   └── check_in/
 │       └── README.md
@@ -50,9 +51,23 @@ It also adds a rule pointer to the project's root `AGENTS.md`, preserving other 
 | `paper_material/AGENTS.md` | Persistent project rules for paper materials |
 | `paper_material/README.md` | Index of sources, results, applicable conditions, material paths, and status |
 | `paper_material/TODO.md` | In-progress, completed, and pending paper preparation work only |
+| `paper_material/CONTEXT.md` | Paper glossary separating confirmed terms from candidates |
 | `docs/` | Literature notes, analysis, and conclusions, optionally grouped by topic |
 | `illustrations/<topic>/` | Illustrations, editable sources, scripts, and exports for one topic |
 | Both `check_in/` directories | Approved versions with registration authorization and source indexes |
+
+## Paper terminology
+
+Project development uses the root `CONTEXT.md`; paper writing uses `paper_material/CONTEXT.md` for all reader-facing content, including titles, abstracts, prose, captions, and axes, regardless of file location. Mixed tasks use the appropriate glossary for each part and record mappings; conflicting definitions require clarification. The root `AGENTS.md` explicitly directs agents to read the relevant rules, rather than relying on ordinary file reads to load nested instructions automatically.
+
+Before first creating the paper glossary, including for existing projects, the skill asks: **scan all project materials, or create an empty structure?** Subsequent invocations preserve the existing glossary without repeating this choice.
+
+- Scanning inventories the project, then prioritizes other `CONTEXT.md` files, documentation, drafts, figure labels, and relevant code explanations. Datasets and weights are understood through metadata and documentation. Entries record sources; the material README records scan coverage and unread materials.
+- The empty structure contains a scope statement and sections for confirmed terms and candidates, without inferred terminology.
+- Entries include a preferred name, definition, and scope, with optional Chinese/English equivalents, abbreviations, historical aliases, project-term mappings, sources, and confirmation evidence. Research background, experimental facts, and task records belong elsewhere.
+- Imported project terms are paper candidates by default. Users may confirm them in batches; existing explicit paper terminology agreements can be recorded directly. Each concept has one preferred name per language, with documented equivalents, abbreviations, and grammatical variations allowed.
+- User confirmation makes a term effective without check in. New core concepts or ambiguity require clarification; affected passages remain pending while other clear work continues. Each writing or revision task ends with a terminology consistency check.
+- Terminology changes require confirmation and an impact review. Working drafts are updated within the authorized scope; registered materials retain the revision and renewed registration authorization workflow.
 
 ## Approval and check in
 
